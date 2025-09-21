@@ -78,6 +78,13 @@ public class UseCaseDiagramGraph extends AbstractGraph
         communication.setToolTip(rs.getString("edge0.tooltip"));
         EDGE_PROTOTYPES.add(communication);
 
+        UseCaseRelationshipEdge communicationWithArrow = new UseCaseRelationshipEdge();
+        communicationWithArrow.setBentStyle(BentStyle.STRAIGHT);
+        communicationWithArrow.setLineStyle(LineStyle.SOLID);
+        communicationWithArrow.setEndArrowHead(ArrowHead.BLACK_TRIANGLE);
+        communicationWithArrow.setToolTip(rs.getString("edge0.tooltip"));
+        EDGE_PROTOTYPES.add(communicationWithArrow);
+
         UseCaseRelationshipEdge extendRel = new UseCaseRelationshipEdge();
         extendRel.setBentStyle(BentStyle.STRAIGHT);
         extendRel.setLineStyle(LineStyle.DOTTED);
